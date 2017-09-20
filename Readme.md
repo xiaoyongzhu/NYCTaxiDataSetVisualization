@@ -32,7 +32,7 @@ To setup this demo, you need to do a few things:
 
         lubridate rgeos sp maptools stringr magrittr ggplot2 circlize purrr
         
-4.	Execute this script action to install libgeos in all nodes: https://raw.githubusercontent.com/akzaidi/spark_nyc_taxi/master/Instructor-Resources/Shell-Scripts/libgeos_install.sh 
+4.	Execute this script action to install libgeos in all nodes: https://raw.githubusercontent.com/xiaoyongzhu/NYCTaxiDataSetVisualization/master/install%20libgeos.sh
 5.	Execute the R commands as below:
 6.	You should be able to see two graphs:
 a.	The taxi traffic between different communities for NYC 
