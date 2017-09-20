@@ -26,7 +26,7 @@ To setup this demo, you need to do a few things:
     Since we are doing distributed analysis using R, it is required that all the HDInsight worker nodes have the required libraries. Fortunately, 
     Install required R libraries in those clusters, using the “Install additional R libraries” command in the script action drop down list:
 
-    ![Script Actions](Install R Libraries.png)
+    ![Script Actions](Install_R_Libraries.png)
     
     The libraries need to be installed (input the value below to the input box) are:
 
