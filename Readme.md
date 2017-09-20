@@ -32,9 +32,17 @@ To setup this demo, you need to do a few things:
 
         lubridate rgeos sp maptools stringr magrittr ggplot2 circlize purrr
         
-4.	Execute this script action to install libgeos in all nodes: https://raw.githubusercontent.com/xiaoyongzhu/NYCTaxiDataSetVisualization/master/install%20libgeos.sh
-5.	Execute the R commands as below:
-6.	You should be able to see two graphs:
-a.	The taxi traffic between different communities for NYC 
-b.	The distribution of amount of tips passengers give 
-7.	More details on this dataset and what we want to achieve can be found here: 
+    You also need to install libgeos on all the nodes. Execute this script action to install libgeos in all nodes: https://raw.githubusercontent.com/xiaoyongzhu/NYCTaxiDataSetVisualization/master/install%20libgeos.sh
+
+4. 	Execute the R scripts in this folder (NYCTaxiDataSetDemo.r)
+5.	After execution, you should be able to see two graphs:
+
+    Tip Distribution, shows what's the tip distribution (tip percent) for different pick up hours and different days. The insight we can get from this graph is that for rush hours the tip is usually low, while for after hours pick-up the tip is usually high.
+
+    ![Tip Distribution](TipDistribution.png)
+
+    Traffic visualization, showcases how do people usually commute.
+    
+    ![Traffic Visualization](TrafficVisualization.png)
+
+6.	More details on this dataset and what we want to achieve can be found in Ali's original repository above.
