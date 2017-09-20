@@ -4,6 +4,17 @@
 #install.packages(c("circlize", "purrr"))
 #install.packages('rgeos', type="source")
 
+system("mkdir -p ~/nyc-taxi-data/data/")
+
+# Download the trip files
+download.file("https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2009-01.csv",
+              destfile = "~/nyc-taxi-data/data/yellow_tripdata_2009-01.csv")
+
+
+system("hadoop fs -mkdir wasb:///NYCDataRServerVisualization/")
+
+system("hadoop fs -put ~/nyc-taxi-data/data/yellow_tripdata_2009-01.csv wasb:///NYCDataRServerVisualization/")
+
 rxSetComputeContext("local")
 
 hdfsFS <- RxHdfsFileSystem()
@@ -28,7 +39,7 @@ taxi_xdf <- file.path(data_path, "TestXdf")
 
 #get some sample data from local disk
 nyc_sample_df <-
-  read.csv("/home/sshuser/nyc-taxi-data/data/yellow_tripdata_2009-01.csv",
+  read.csv("~/nyc-taxi-data/data/yellow_tripdata_2009-01.csv",
            nrows = 1000)
 
 taxi_text <- RxTextData(taxi_path, fileSystem = hdfsFS)
